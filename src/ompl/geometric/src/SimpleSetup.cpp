@@ -97,10 +97,10 @@ ompl::base::PlannerStatus ompl::geometric::SimpleSetup::solve(double time)
     time::point start = time::now();
     lastStatus_ = planner_->solve(time);
     planTime_ = time::seconds(time::now() - start);
-    if (lastStatus_)
-        OMPL_INFORM("Solution found in %f seconds", planTime_);
-    else
-        OMPL_INFORM("No solution found after %f seconds", planTime_);
+    // if (lastStatus_)
+        // OMPL_INFORM("Solution found in %f seconds", planTime_);
+    // else
+        // OMPL_INFORM("No solution found after %f seconds", planTime_);
     return lastStatus_;
 }
 
@@ -111,10 +111,10 @@ ompl::base::PlannerStatus ompl::geometric::SimpleSetup::solve(const base::Planne
     time::point start = time::now();
     lastStatus_ = planner_->solve(ptc);
     planTime_ = time::seconds(time::now() - start);
-    if (lastStatus_)
-        OMPL_INFORM("Solution found in %f seconds", planTime_);
-    else
-        OMPL_INFORM("No solution found after %f seconds", planTime_);
+    // if (lastStatus_)
+        // OMPL_INFORM("Solution found in %f seconds", planTime_);
+    // else
+        // OMPL_INFORM("No solution found after %f seconds", planTime_);
     return lastStatus_;
 }
 
